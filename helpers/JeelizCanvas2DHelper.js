@@ -10,7 +10,7 @@ Return an object width these properties:
  - resize: to call if the HTML canvas size has changed
 */
 
-const JeelizCanvas2DHelper = function(spec){
+const JeelizCanvas2DHelper = (function(spec){
 
   // some globalz:
   let CV = null, CANVAS2D = null, CTX = null, GL = null, CANVASTEXTURE = null, CANVASTEXTURENEEDSUPDATE = null, SHADERCOPY = null, VIDEOTEXTURE = null;
@@ -138,4 +138,4 @@ const JeelizCanvas2DHelper = function(spec){
       CANVAS2D.height = CV.height;
     }
   }; //end Canvas2DDisplay return value
-} //end JeelizCanvas2DHelper()
+})(); //end JeelizCanvas2DHelper()
